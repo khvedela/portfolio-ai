@@ -1,11 +1,14 @@
 import { Inter } from "next/font/google";
 import Image from 'next/image'
 import { Linkedin, Mail, Phone } from 'lucide-react'
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
+    <>
+    <Analytics />
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden">
         <div className="md:flex">
@@ -95,5 +98,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </>
   )
 }
